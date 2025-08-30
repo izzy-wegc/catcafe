@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Izzy's Cat Cafe</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>          
+
+    <header style="text-align: center; margin: 20px;">
+      <div style="display: inline-block;">
+        <img src="izzy_cat_cafe_logo_only.png" alt="Izzy's Cat Cafe Logo" class="logo" height="150">  
+      </div>
+      <div style="display: inline-block;">
+        <img src="izzy_cat_cafe_text_only.png" alt="Izzy's Cat Cafe Logo" class="logo" height="150">
+      </div>      
+    </header>
+
+    <div class="navigation">
+        <div><a class="a1" href="index.html">Home</a></div>
+        <div><a class="a1" href="about.html">About Us</a></div>
+        <div><a class="a1" href="our-cats.html">Our Cats</a></div>          
+        <div><a class="a1" href="menu.html">Our Treats</a></div>
+        <div><a class="a1" href="contact.html">Contact</a></div>
+    </div>
+
+    <h1 class="page-title">Support Our Mission</h1>
+    <p class="page-subtitle">Every donation helps us save more cats!</p>
+
+    <div class="donation-container">
+        <form action="donation-success.html" method="GET" class="donation-form">
+            
+            <!-- Donation Amount Section -->
+            <section class="donation-section">
+                <h2>Choose Your Gift Amount</h2>
+                <div class="amount-grid">
+                    <label class="amount-option">
+                        <input type="radio" name="amount" value="25" required>
+                        <span class="amount-box">
+                            <span class="amount-value">$25</span>
+                            <span class="amount-label">Feed 5 Cats</span>
+                        </span>
+                    </label>
+                    <label class="amount-option">
+                        <input type="radio" name="amount" value="50">
+                        <span class="amount-box">
+                            <span class="amount-value">$50</span>
+                            <span class="amount-label">Medical Care</span>
+                        </span>
+                    </label>
+                    <label class="amount-option">
+                        <input type="radio" name="amount" value="100">
+                        <span class="amount-box">
+                            <span class="amount-value">$100</span>
+                            <span class="amount-label">Rescue a Cat</span>
+                        </span>
+                    </label>
+                    <label class="amount-option">
+                        <input type="radio" name="amount" value="250">
+                        <span class="amount-box">
+                            <span class="amount-value">$250</span>
+                            <span class="amount-label">Sponsor Care</span>
+                        </span>
+                    </label>
+                    <label class="amount-option">
+                        <input type="radio" name="amount" value="500">
+                        <span class="amount-box">
+                            <span class="amount-value">$500</span>
+                            <span class="amount-label">Major Impact</span>
+                        </span>
+                    </label>
+                    <label class="amount-option custom">
+                        <input type="radio" name="amount" value="custom">
+                        <span class="amount-box">
+                            <span class="amount-value">Other</span>
+                            <input type="number" class="custom-amount" placeholder="Enter amount" min="1" step="1">
+                        </span>
+                    </label>
+                </div>
+
+                <div class="donation-frequency">
+                    <label class="frequency-option">
+                        <input type="radio" name="frequency" value="once" checked>
+                        <span>One-time donation</span>
+                    </label>
+                    <label class="frequency-option">
+                        <input type="radio" name="frequency" value="monthly">
+                        <span>Monthly recurring</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Donor Information Section -->
+            <section class="donation-section">
+                <h2>Your Information</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message for the Cats (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Share why you're supporting our mission..."></textarea>
+                    </div>
+                </div>
+
+                <div class="recognition-option">
+                    <label>
+                        <input type="checkbox" name="anonymous">
+                        <span>Make my donation anonymous</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Payment Method Section (Mock) -->
+            <section class="donation-section">
+                <h2>Payment Method</h2>
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span class="payment-box">
+                            <span class="payment-icon">💳</span>
+                            <span>Credit/Debit Card</span>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="paypal">
+                        <span class="payment-box">
+                            <span class="payment-icon">🅿️</span>
+                            <span>PayPal</span>
+                        </span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="venmo">
+                        <span class="payment-box">
+                            <span class="payment-icon">💵</span>
+                            <span>Venmo</span>
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Mock Card Details -->
+                <div class="card-details" id="cardDetails">
+                    <div class="form-group full-width">
+                        <label for="cardNumber">Card Number *</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date *</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV *</label>
+                            <input type="text" id="cvv" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="billingZip">Billing ZIP Code *</label>
+                        <input type="text" id="billingZip" placeholder="90210" maxlength="10">
+                    </div>
+                </div>
+
+                <div class="security-note">
+                    <p>🔒 This is a demonstration form. No payment information is actually processed.</p>
+                </div>
+            </section>
+
+            <!-- Impact Statement -->
+            <section class="donation-section impact-statement">
+                <h3>Your Impact</h3>
+                <div class="impact-preview">
+                    <p>Your generous donation will help us:</p>
+                    <ul>
+                        <li>Provide food and shelter for rescued cats</li>
+                        <li>Cover medical expenses and vaccinations</li>
+                        <li>Support our adoption programs</li>
+                        <li>Maintain a safe, loving environment</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="submit" class="donate-submit-btn">Complete Donation</button>
+                <p class="form-note">You will receive a confirmation email after your donation is processed.</p>
+            </div>
+        </form>
+
+        <!-- Trust Badges -->
+        <div class="trust-section">
+            <h3>Why Donate to Izzy's Cat Cafe?</h3>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-icon">🏆</span>
+                    <h4>501(c)(3) Nonprofit</h4>
+                    <p>Tax-deductible donations</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">💯</span>
+                    <h4>100% Goes to Cats</h4>
+                    <p>Every dollar helps our mission</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">📊</span>
+                    <h4>Transparent</h4>
+                    <p>Regular impact reports</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">❤️</span>
+                    <h4>500+ Cats Saved</h4>
+                    <p>Proven track record</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <button class="donate-btn">Donate</button>
+    </footer>
+</body>
+</html>

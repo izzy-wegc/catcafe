@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - Izzy's Cat Cafe</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>          
+
+    <header style="text-align: center; margin: 20px;">
+      <div style="display: inline-block;">
+        <img src="izzy_cat_cafe_logo_only.png" alt="Izzy's Cat Cafe Logo" class="logo" height="150">  
+      </div>
+      <div style="display: inline-block;">
+        <img src="izzy_cat_cafe_text_only.png" alt="Izzy's Cat Cafe Logo" class="logo" height="150">
+      </div>      
+    </header>
+
+    <div class="navigation">
+        <div><a class="a1" href="index.html">Home</a></div>
+        <div><a class="a1" href="about.html">About Us</a></div>
+        <div><a class="a1" href="our-cats.html">Our Cats</a></div>          
+        <div><a class="a1" href="menu.html">Our Treats</a></div>
+        <div><a class="a1" href="contact.html">Contact</a></div>
+    </div>
+
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-icon">🎉</div>
+            <h1 class="success-title">Thank You for Your Donation!</h1>
+            <p class="success-message">Your generous support means the world to us and the cats we care for.</p>
+            
+            <div class="donation-details">
+                <h2>Donation Confirmation</h2>
+                <div class="detail-row">
+                    <span class="detail-label">Confirmation Number:</span>
+                    <span class="detail-value">#CAT2024-<script>document.write(Math.floor(Math.random() * 9999) + 1000)</script></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Date:</span>
+                    <span class="detail-value"><script>document.write(new Date().toLocaleDateString())</script></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Amount:</span>
+                    <span class="detail-value">$<script>
+                        const params = new URLSearchParams(window.location.search);
+                        document.write(params.get('amount') || '50');
+                    </script></span>
+                </div>
+                <div class="detail-row">
+                    <span class="detail-label">Tax Deductible:</span>
+                    <span class="detail-value">Yes</span>
+                </div>
+            </div>
+
+            <div class="impact-message">
+                <h3>Your Impact</h3>
+                <p>Thanks to your donation, we can continue:</p>
+                <ul class="impact-list">
+                    <li>✓ Rescuing cats from difficult situations</li>
+                    <li>✓ Providing medical care and vaccinations</li>
+                    <li>✓ Finding loving forever homes</li>
+                    <li>✓ Maintaining our safe haven cafe</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <p>You'll receive an email confirmation shortly with your donation receipt for tax purposes.</p>
+                <p>Want to make an even bigger impact?</p>
+                <div class="action-buttons">
+                    <a href="our-cats.html" class="action-btn primary">Meet Our Cats</a>
+                    <a href="about.html#volunteer" class="action-btn secondary">Volunteer With Us</a>
+                </div>
+            </div>
+
+            <div class="social-share">
+                <h3>Spread the Love</h3>
+                <p>Help us reach more cat lovers by sharing your support!</p>
+                <div class="share-buttons">
+                    <button class="share-btn facebook">Share on Facebook</button>
+                    <button class="share-btn twitter">Share on Twitter</button>
+                    <button class="share-btn instagram">Share on Instagram</button>
+                </div>
+            </div>
+
+            <div class="cat-quote">
+                <p class="quote">"The smallest feline is a masterpiece."</p>
+                <p class="quote-author">- Leonardo da Vinci</p>
+            </div>
+        </div>
+
+        <div class="return-home">
+            <a href="index.html" class="return-link">← Return to Homepage</a>
+        </div>
+    </div>
+
+    <footer>
+        <button class="donate-btn">Donate</button>
+    </footer>
+
+    <script>
+        // Simple confetti effect
+        if (!window.location.search) {
+            window.location.search = '?amount=50';
+        }
+    </script>
+</body>
+</html>
